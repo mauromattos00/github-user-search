@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $mustard;
+    color: $white;
+
+    &:active {
+      background: $mustard-dark;
+    }
+  }
+
+  &--ghost {
+    background: none;
+    color: $pink;
+
+    &:active {
+      background: $grey-1;
+    }
+  }
+}
