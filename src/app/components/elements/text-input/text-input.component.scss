@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+.search-input {
+  height: 100%;
+  padding: 8px 15px;
+  border: 1.5px solid $grey-1;
+  color: $grey-2;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
