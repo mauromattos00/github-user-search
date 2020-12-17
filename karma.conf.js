@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-import path from 'path';
 
 module.exports = function (config) {
   config.set({
@@ -26,7 +26,10 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: path.join(__dirname, './coverage/totvs-hospitality-challenge'),
+      dir: require('path').join(
+        __dirname,
+        './coverage/totvs-hospitality-challenge',
+      ),
       subdir: '.',
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
