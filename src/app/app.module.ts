@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { AtomsModule } from './components/atoms/atoms.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule],
