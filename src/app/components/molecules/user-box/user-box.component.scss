@@ -1,0 +1,68 @@
+@import "../../../styles/variables";
+
+.user-box {
+  border: 1.5px solid $grey-2;
+  border-radius: 3px;
+  background-color: $white;
+  transition: height 0.5s ease-out;
+
+
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 17px;
+    border-bottom: 1.5px solid $grey-2;
+
+    &-user-info {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__card-toggler {
+    display: flex;
+    align-items: center;
+    color: $pink;
+    cursor: pointer;
+  }
+
+  &__card-toggler-icon {
+    height: 16px;
+    margin-left: 10px;
+    transition: transform 0.2s ease-out;
+
+    &--inverted {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding: 30px;
+
+    &--collapsed {
+      display: none;
+    }
+
+    &-details {
+      background: red;
+      display: flex;
+      flex-grow: 1;
+    }
+
+    &-see-more {
+      background: blue;
+    }
+  }
+}
+
+.user {
+  &__image {
+    margin-right: 17px;
+  }
+
+  &__name {
+    color: $grey-4;
+  }
+}

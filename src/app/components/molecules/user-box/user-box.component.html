@@ -1,0 +1,24 @@
+<section class="user-box">
+  <header class="user-box__header">
+    <div class="user-box__header-user-info">
+      <img class="user__image" src="https://via.placeholder.com/40" alt="User Avatar">
+      <span class="user__name">
+        Username
+      </span>
+    </div>
+
+    <div class="user-box__card-toggler" (click)="isExpanded = !isExpanded">
+      <span>Ocultar detalhes do usuário</span>
+      <img class="user-box__card-toggler-icon" [ngClass]="{'user-box__card-toggler-icon--inverted': !isExpanded}"
+        src="../../../../assets/up-chevron.svg" alt="Chevron">
+    </div>
+  </header>
+  <section class=" user-box__content" [ngClass]="{'user-box__content--collapsed': !isExpanded}">
+    <div class="user-box__content-details">
+      DETALHES DO USUARIO
+    </div>
+    <div class="user-box__content-see-more">
+      <app-button type="primary">VER MAIS</app-button>
+    </div>
+  </section>
+</section>
