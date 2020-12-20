@@ -1,5 +1,5 @@
 <section class="search-box">
-  <app-text-input placeholder="Digite o nome de um usuário" (text)="queryString" (textChange)="onTextChange($event)"
+  <app-text-input placeholder="Digite o nome de um usuário" (text)="queryText" (textChange)="onTextChange($event)"
     (submitSearch)="searchUser()">
   </app-text-input>
   <app-button type="primary" (buttonClick)="searchUser()">
