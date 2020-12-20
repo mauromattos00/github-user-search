@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +9,9 @@ import { MoleculesModule } from './components/molecules/molecules.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AtomsModule, MoleculesModule],
+    StoreDevtoolsModule.instrument({
+      maxAge: 20,
+    }),
   providers: [],
   bootstrap: [AppComponent],
 })
