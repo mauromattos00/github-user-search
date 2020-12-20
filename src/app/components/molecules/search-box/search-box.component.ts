@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-search-box',
   templateUrl: './search-box.component.html',
-  styleUrls: ['./search-box.component.scss']
+  styleUrls: ['./search-box.component.scss'],
 })
-export class SearchBoxComponent implements OnInit {
+export class SearchBoxComponent {
+  constructor() {}
 
-  constructor() { }
+  queryText: string;
 
-  ngOnInit(): void {
+  searchUser(): void {}
+
+  onTextChange(text: string): void {
+    this.queryText = text;
   }
-
 }

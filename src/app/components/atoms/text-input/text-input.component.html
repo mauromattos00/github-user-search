@@ -1,1 +1,2 @@
-<input type="text" class="search-input" [placeholder]="placeholder" (input)="handleInputChange($event.target.value)">
+<input type="text" class="search-input" [(ngModel)]="text" (keydown.enter)="searchText()" [placeholder]="placeholder"
+  (input)="handleTextChange()">
