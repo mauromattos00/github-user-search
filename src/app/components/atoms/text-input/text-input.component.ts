@@ -6,8 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./text-input.component.scss'],
 })
 export class TextInputComponent {
-  @Input()
-  placeholder: string;
+  @Input() placeholder: string;
 
   @Output()
   inputChangeEvent = new EventEmitter<string>();
