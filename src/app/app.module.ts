@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { MoleculesModule } from './components/molecules/molecules.module';
 
 @NgModule({
   declarations: [AppComponent],
+    StoreModule.forRoot({ userList: userListReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 20,
     }),
