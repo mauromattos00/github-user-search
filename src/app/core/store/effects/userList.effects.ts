@@ -22,7 +22,7 @@ export class UserListEffects {
                 username: user.login,
                 avatar: user.avatar_url,
                 url: user.html_url,
-                apiUrl: user.url,
+                htmlUrl: user.html_url,
               }));
             }
             return [];
