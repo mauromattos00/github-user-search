@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 
-import { search } from '../actions/userList.actions';
+import { search, searchSuccess } from '../actions/userList.actions';
 import { IUserList } from '../models/userList.model';
 
 export const initialState: IUserList = {
@@ -14,6 +14,12 @@ const _userListReducer = createReducer(
   on(search, (state: IUserList) => ({
     ...state,
     loading: true,
+  })),
+  on(searchSuccess, (state: IUserList, action: any) => ({
+    ...state,
+    loading: false,
+    loaded: true,
+    users: action.props,
   })),
 );
 
