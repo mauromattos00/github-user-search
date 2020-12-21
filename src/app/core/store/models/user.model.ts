@@ -1,5 +1,7 @@
 export interface IUser {
-  login: string;
-  avatarUrl: string;
-  htmlUrl: string;
+  username: string;
+  avatar: string;
+  url: string;
+  apiUrl: string;
+  followers?: number;
 }
