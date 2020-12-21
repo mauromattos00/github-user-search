@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IUser } from '../../../core/store/models/user.model';
 
 @Component({
   selector: 'app-user-box',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class UserBoxComponent {
   isExpanded = false;
+  @Input() user: IUser;
 
   constructor() {}
 }

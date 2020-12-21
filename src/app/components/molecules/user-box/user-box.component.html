@@ -1,14 +1,18 @@
 <section class="user-box">
   <header class="user-box__header">
     <div class="user-box__header-user-info">
-      <img class="user__image" src="https://via.placeholder.com/40" alt="User Avatar">
+      <img class="user__image" [src]="user.avatar" alt="User Avatar">
       <span class="user__name">
-        Username
+        {{user.username}}
       </span>
     </div>
 
     <div class="user-box__card-toggler" (click)="isExpanded = !isExpanded">
-      <span>Ocultar detalhes do usuário</span>
+      <span *ngIf="isExpanded; else showDetailsTemplate">Ocultar detalhes do usuário</span>
+      <ng-template #showDetailsTemplate>
+        <span>Exibir detalhes do usuário</span>
+      </ng-template>
+
       <img class="user-box__card-toggler-icon" [ngClass]="{'user-box__card-toggler-icon--inverted': !isExpanded}"
         src="../../../../assets/up-chevron.svg" alt="Chevron">
     </div>
