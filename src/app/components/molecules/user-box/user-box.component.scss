@@ -45,9 +45,9 @@
     }
 
     &-details {
-      background: red;
       display: flex;
       flex-grow: 1;
+      color: $grey-4;
     }
 
     &-see-more {
