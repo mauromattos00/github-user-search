@@ -1,0 +1,11 @@
+<div class="user-list">
+  <div class="user-list__img-not-found-container"
+    *ngIf="(!(isUserListLoading$ | async) && (userList$ | async).length == 0); else list">
+    <img class="user-list__img-not-found" src="../../../../assets/img-empty.svg" alt="No Users Image">
+  </div>
+
+  <ng-template #list>
+    <h4 class="user-list__heading">Resultados da busca</h4>
+    <app-user-box *ngFor="let user of userList$ | async" [user]="user"></app-user-box>
+  </ng-template>
+</div>

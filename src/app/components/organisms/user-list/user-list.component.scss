@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.user-list {
+  width: 650px;
+
+  &__heading {
+    margin-bottom: 15px;
+    color: $grey-3;
+  }
+
+  &__img-not-found-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img-not-found {
+    width: 30%;
+    margin-top: 30px;
+  }
+}
