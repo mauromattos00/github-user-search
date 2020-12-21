@@ -1,6 +1,8 @@
+@import "./styles/breakpoints";
+
 .app-content {
   height: 100vh;
-  padding: 50px 30px;
+  padding: 15px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,5 +10,21 @@
   &__logo {
     height: 30px;
     margin-bottom: 60px;
+  }
+
+  @include sm {
+    padding: 35px 10px;
+  }
+
+  @include md {
+    padding: 55px 10px 0;
+  }
+
+  @include lg {
+    padding: 75px 10px 0;
+  }
+
+  @include xl {
+    padding: 85px 10px 0;
   }
 }
