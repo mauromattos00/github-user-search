@@ -1,0 +1,17 @@
+@import "../../../styles//variables";
+
+.modal-content {
+  padding: 30px;
+
+  &__text {
+    margin-bottom: 25px;
+    color: $grey-4;
+    font-weight: 500;
+  }
+
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
