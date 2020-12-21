@@ -1,7 +1,8 @@
 <div class="modal-content">
-  <p class="modal-content__text">Tem certeza que deseja sair?</p>
+  <p class="modal-content__text">Tem certeza que deseja ir para o perfil de {{data.user.username}} no GitHub?</p>
   <div class="modal-content__actions">
-    <app-button (buttonClick)="closeDialog()" type="ghost">SIM</app-button>
+    <app-button (buttonClick)="closeDialog()" type="ghost"><a [href]="data.user.htmlUrl" target="_blank">SIM</a>
+    </app-button>
     <app-button (buttonClick)="closeDialog()" type="ghost">NÃO</app-button>
   </div>
 </div>

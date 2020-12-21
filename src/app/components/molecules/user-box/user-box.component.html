@@ -19,7 +19,8 @@
   </header>
   <section class=" user-box__content" [ngClass]="{'user-box__content--collapsed': !isExpanded}">
     <div class="user-box__content-details">
-      DETALHES DO USUARIO
+      <p>Confira mais sobre {{user.username}} em seu perfil do GitHub! Clique em <b>ver mais</b>!
+      </p>
     </div>
     <div class="user-box__content-see-more">
       <app-button type="primary" (buttonClick)="openDialog()">VER MAIS</app-button>

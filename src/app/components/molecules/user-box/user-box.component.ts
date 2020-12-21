@@ -17,6 +17,6 @@ export class UserBoxComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    this.dialog.open(ModalContentComponent);
+    this.dialog.open(ModalContentComponent, { data: { user: this.user } });
   }
 }

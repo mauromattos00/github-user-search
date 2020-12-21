@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+import { IUser } from '../../../core/store/models/user.model';
+
+interface IDialogData {
+  user: IUser;
+}
 
 @Component({
   selector: 'app-modal-content',
@@ -7,7 +13,10 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./modal-content.component.scss'],
 })
 export class ModalContentComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: IDialogData,
+    public dialog: MatDialog,
+  ) {}
 
   closeDialog(): void {
     this.dialog.closeAll();
