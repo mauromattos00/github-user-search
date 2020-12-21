@@ -1,35 +1,71 @@
 @import "../../../styles/variables";
+@import "../../../styles/breakpoints";
 
 .user-box {
+  width: 290px;
   border: 1.5px solid $grey-2;
   border-radius: 3px;
   background-color: $white;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   transition: height 0.5s ease-out;
+
+  @include sm {
+    width: 450px;
+  }
+
+  @include md {
+    width: 600px;
+  }
 
   &__header {
     display: flex;
-    justify-content: space-between;
-    padding: 15px 17px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
     border-bottom: 1.5px solid $grey-2;
+
+    @include sm {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     &-user-info {
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+
+      @include sm {
+        flex-direction: row;
+        margin-bottom: 0;
+      }
     }
   }
 
   &__card-toggler {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: $pink;
     cursor: pointer;
+
+    @include sm {
+      flex-direction: row;
+    }
   }
 
   &__card-toggler-icon {
     height: 16px;
-    margin-left: 10px;
+    margin-top: 10px;
     transition: transform 0.2s ease-out;
+
+    @include sm {
+      margin-left: 10px;
+      margin-top: 0;
+    }
 
     &--inverted {
       transform: rotate(180deg);
@@ -37,17 +73,32 @@
   }
 
   &__content {
+    padding: 20px;
     display: flex;
-    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+
+    @include sm {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    @include md {
+      padding: 30px;
+    }
 
     &--collapsed {
       display: none;
     }
 
     &-details {
-      display: flex;
-      flex-grow: 1;
+      margin-bottom: 10px;
       color: $grey-4;
+
+      @include sm {
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -56,11 +107,17 @@
   &__image {
     height: 40px;
     width: 40px;
-    margin-right: 17px;
+    margin-bottom: 10px;
     border-radius: 50%;
+
+    @include sm {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
   }
 
   &__name {
+    font-weight: 500;
     color: $grey-4;
   }
 }
