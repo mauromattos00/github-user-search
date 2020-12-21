@@ -1,9 +1,10 @@
 @import "../../../styles/variables";
+@import "../../../styles/breakpoints";
 
 .search-input {
   height: 100%;
-  width: 370px;
-  padding: 8px 15px;
+  width: 200px;
+  padding: 4px 15px;
   border: 1.5px solid $grey-1;
   color: $grey-3;
 
@@ -13,5 +14,21 @@
 
   &::placeholder {
     opacity: 0.5;
+  }
+
+  @include sm {
+    width: 270px;
+  }
+
+  @include md {
+    width: 320px;
+  }
+
+  @include lg {
+    width: 370px;
+  }
+
+  @include xl {
+    width: 420px;
   }
 }
