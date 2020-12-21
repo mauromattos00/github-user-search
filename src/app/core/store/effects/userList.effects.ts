@@ -6,7 +6,7 @@ import { UserListService } from '../../services/userList.service';
 
 import { IUser } from '../models/user.model';
 
-import { search, searchSuccess } from '../actions/userList.actions';
+import { search } from '../actions/userList.actions';
 
 @Injectable()
 export class UserListEffects {
