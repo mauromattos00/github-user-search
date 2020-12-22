@@ -14,6 +14,7 @@ const _userListReducer = createReducer(
   on(search, (state: IUserList) => ({
     ...state,
     loading: true,
+    loaded: false,
   })),
   on(searchSuccess, (state: IUserList, action: any) => ({
     ...state,
