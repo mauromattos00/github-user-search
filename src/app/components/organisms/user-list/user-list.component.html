@@ -8,7 +8,7 @@
     <app-spinner></app-spinner>
   </div>
 
-  <div *ngIf="isUserListLoaded$ | async">
+  <div *ngIf="(isUserListLoaded$ | async) && (userList$ | async).length > 0">
     <h4 class="user-list__heading">Resultados da busca</h4>
     <app-user-box *ngFor="let user of userList$ | async" [user]="user"></app-user-box>
   </div>
