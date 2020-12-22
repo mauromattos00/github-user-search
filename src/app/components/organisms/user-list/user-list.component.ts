@@ -15,11 +15,15 @@ import * as userListSelectors from '../../../core/store/selectors/userList.selec
 export class UserListComponent {
   userList$: Observable<any>;
   isUserListLoading$: Observable<boolean>;
+  isUserListLoaded$: Observable<boolean>;
 
   constructor(private store: Store<IAppState>) {
     this.userList$ = this.store.select(userListSelectors.selectUserList);
     this.isUserListLoading$ = this.store.select(
       userListSelectors.isUserListLoading,
+    );
+    this.isUserListLoaded$ = this.store.select(
+      userListSelectors.isUserListLoaded,
     );
   }
 }
