@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { isRegExp } from 'util';
 
 import { ButtonComponent } from './button.component';
 
