@@ -9,7 +9,7 @@ export const initialState: IUserList = {
   users: [],
 };
 
-const _userListReducer = createReducer(
+const reducer = createReducer(
   initialState,
   on(search, (state: IUserList) => ({
     ...state,
@@ -25,5 +25,5 @@ const _userListReducer = createReducer(
 );
 
 export function userListReducer(state, action) {
-  return _userListReducer(state, action);
+  return reducer(state, action);
 }
