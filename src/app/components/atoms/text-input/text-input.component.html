@@ -1,3 +1,9 @@
-<input autofocus type="text" class="search-input" [(ngModel)]="text" (keydown.enter)="searchText()"
+<input
+  autofocus
+  type="text"
+  class="search-input"
+  [(ngModel)]="text"
+  (keydown.enter)="searchText()"
   [placeholder]="placeholder"
-  (input)="handleTextChange()">
+  (input)="handleTextChange()"
+/>
