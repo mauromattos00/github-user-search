@@ -1,6 +1,10 @@
 <section class="search-box">
-  <app-text-input placeholder="Digite o nome de um usuário" (text)="queryText" (textChange)="onTextChange($event)"
-    (submitSearch)="searchUser()">
+  <app-text-input
+    placeholder="Digite o nome de um usuário"
+    (text)="(queryText)"
+    (textChange)="onTextChange($event)"
+    (submitSearch)="searchUser()"
+  >
   </app-text-input>
   <app-button type="primary" (buttonClick)="searchUser()">
     <img class="btn__icon" src="../assets/icon-search.svg" alt="icon-search" />

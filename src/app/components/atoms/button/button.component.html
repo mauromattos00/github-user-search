@@ -1,7 +1,10 @@
-<button class="btn" [ngClass]="{
+<button
+  class="btn"
+  [ngClass]="{
     'btn--primary': type === 'primary',
     'btn--ghost': type === 'ghost'
   }"
-  (click)="onClick()">
+  (click)="onClick()"
+>
   <ng-content></ng-content>
 </button>

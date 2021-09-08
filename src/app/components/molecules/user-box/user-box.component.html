@@ -1,30 +1,39 @@
 <section class="user-box">
   <header class="user-box__header">
     <div class="user-box__header-user-info">
-      <img class="user__image" [src]="user.avatar" alt="User Avatar">
+      <img class="user__image" [src]="user.avatar" alt="User Avatar" />
       <span class="user__name">
-        {{user.username}}
+        {{ user.username }}
       </span>
     </div>
 
     <div class="user-box__card-toggler" (click)="isExpanded = !isExpanded">
-      <span *ngIf="isExpanded; else showDetailsTemplate">Ocultar detalhes do usuário</span>
+      <span *ngIf="isExpanded; else showDetailsTemplate"
+        >Ocultar detalhes do usuário</span
+      >
       <ng-template #showDetailsTemplate>
         <span>Exibir detalhes do usuário</span>
       </ng-template>
 
-      <img class="user-box__card-toggler-icon" [ngClass]="{'user-box__card-toggler-icon--inverted': !isExpanded}"
-        src="../../../../assets/up-chevron.svg" alt="Chevron">
+      <img
+        class="user-box__card-toggler-icon"
+        [ngClass]="{ 'user-box__card-toggler-icon--inverted': !isExpanded }"
+        src="../../../../assets/up-chevron.svg"
+        alt="Chevron"
+      />
     </div>
   </header>
-  <section class=" user-box__content" [ngClass]="{'user-box__content--collapsed': !isExpanded}">
+  <section
+    class="user-box__content"
+    [ngClass]="{ 'user-box__content--collapsed': !isExpanded }"
+  >
     <div class="user-box__content-details">
-      <p>
-        Confira mais sobre {{user.username}} em seu perfil do GitHub!
-      </p>
+      <p>Confira mais sobre {{ user.username }} em seu perfil do GitHub!</p>
     </div>
     <div class="user-box__content-see-more">
-      <app-button type="primary" (buttonClick)="openDialog()">VER MAIS</app-button>
+      <app-button type="primary" (buttonClick)="openDialog()"
+        >VER MAIS</app-button
+      >
     </div>
   </section>
 </section>
